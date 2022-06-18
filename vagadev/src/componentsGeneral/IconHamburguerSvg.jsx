@@ -1,6 +1,6 @@
 import React from 'react';
 
-const IconHamburguer = () => {
+const IconHamburguer = ({ color }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -9,7 +9,7 @@ const IconHamburguer = () => {
       version="1.1"
       viewBox="0 0 30 24"
     >
-      <g fill="#000" transform="translate(-382 -48)">
+      <g fill={color} transform="translate(-382 -48)">
         <rect
           width="30"
           height="3"

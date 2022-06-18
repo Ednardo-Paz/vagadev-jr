@@ -9,7 +9,7 @@ const Menu = () => {
     <header className={styles.header}>
       <div className={styles.menuLogo}>
         <div className={styles.menu}>
-          <IconHamburguer />
+          <IconHamburguer color={'#EBEBEB'} />
         </div>
         <Link to="/">
           <img className={styles.logo} src={logo} alt="Logo" />

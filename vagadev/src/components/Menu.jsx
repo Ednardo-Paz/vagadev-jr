@@ -4,6 +4,8 @@ import styles from './Menu.module.css';
 import logo from '../assets/img/Logo.png';
 import IconHamburguer from '../componentsGeneral/IconHamburguerSvg';
 import IconPaperPlane from '../componentsGeneral/IconPaperPlaneSvg';
+import IconSearchSvg from '../componentsGeneral/IconSearchSvg';
+import IconShopBagSvg from '../componentsGeneral/IconShopBagSvg';
 
 const Menu = () => {
   return (
@@ -21,15 +23,22 @@ const Menu = () => {
         <ul className={styles.menuNav}>
           <li>
             <IconPaperPlane height={'21px'} width={'26px'} color={'#000'} />
-            <Link to="/">CONTATO</Link>
+            <Link className={styles.iconSvg} to="/">
+              CONTATO
+            </Link>
           </li>
           <li className={styles.divider}></li>
           <li>
-            <Link to="/">BUSCAR</Link>
+            <IconSearchSvg color={''} width={'25px'} height={'20px'} />
+            <Link className={styles.iconSvg} to="/">
+              BUSCAR
+            </Link>
           </li>
           <li className={styles.divider}></li>
           <li>
-            <Link to="/">CARRINHO</Link>
+            <Link to="/">
+              <IconShopBagSvg color={''} width={'22px'} height={'26px'} />
+            </Link>
           </li>
         </ul>
       </nav>

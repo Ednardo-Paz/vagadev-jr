@@ -12,10 +12,11 @@
 
 .menuNav {
   display: flex;
+  align-items: center;
   gap: 30px;
   font-family: 'Roboto';
   font-size: 14px;
-  line-height: 30px;
+
   vertical-align: Top;
 }
 
@@ -27,9 +28,12 @@
 .divider {
   width: 30px;
   height: 0px;
-  position: relative;
-  top: 13px;
+
 
   border: 1px solid #000;
   transform: rotate(90deg);
+}
+
+.iconSvg {
+  margin-left: 15px;
 }

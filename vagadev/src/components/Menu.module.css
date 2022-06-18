@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  align-items: center;
+  margin-top: 45px;
+  justify-content: space-around;
+}
+
+.logo {
+  width: 163px;
+  margin-left: 30px;
+}
+
+.menuNav {
+  display: flex;
+  gap: 30px;
+}
+
+.menuLogo {
+  display: flex;
+  align-items: center;
+
+}

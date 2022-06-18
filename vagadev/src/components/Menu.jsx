@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import styles from './Menu.module.css';
 import logo from '../assets/img/Logo.png';
 import IconHamburguer from '../componentsGeneral/IconHamburguerSvg';
+import IconPaperPlane from '../componentsGeneral/IconPaperPlaneSvg';
 
 const Menu = () => {
   return (
@@ -19,13 +20,14 @@ const Menu = () => {
       <nav className={styles.nav}>
         <ul className={styles.menuNav}>
           <li>
+            <IconPaperPlane height={'21px'} width={'26px'} color={'#000'} />
             <Link to="/">CONTATO</Link>
           </li>
-          <li>{'|'}</li>
+          <li className={styles.divider}></li>
           <li>
             <Link to="/">BUSCAR</Link>
           </li>
-          <li>{' |'}</li>
+          <li className={styles.divider}></li>
           <li>
             <Link to="/">CARRINHO</Link>
           </li>

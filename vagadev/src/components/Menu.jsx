@@ -22,16 +22,20 @@ const Menu = () => {
       <nav className={styles.nav}>
         <ul className={styles.menuNav}>
           <li>
-            <IconPaperPlane height={'21px'} width={'26px'} color={'#EBEBEB'} />
-            <Link className={styles.iconSvg} to="/">
-              CONTATO
+            <Link to="/">
+              <IconPaperPlane
+                height={'21px'}
+                width={'26px'}
+                color={'#EBEBEB'}
+              />
+              <span className={styles.iconSvg}>CONTATO</span>
             </Link>
           </li>
           <li className={styles.divider}></li>
           <li>
-            <IconSearchSvg color={'#EBEBEB'} width={'25px'} height={'20px'} />
-            <Link className={styles.iconSvg} to="/">
-              BUSCAR
+            <Link to="/">
+              <IconSearchSvg color={'#EBEBEB'} width={'25px'} height={'20px'} />
+              <span className={styles.iconSvg}>BUSCAR</span>
             </Link>
           </li>
           <li className={styles.divider}></li>

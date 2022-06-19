@@ -1,1 +1,10 @@
+.sectionContainer {
+  position: absolute;
+  top: 0;
+}
 
+@media (max-width: 768px) {
+  .imgBanner {
+    height: 436px;
+  }
+}

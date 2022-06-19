@@ -12,8 +12,14 @@
   padding: 0;
 }
 
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
 img {
-  
+  display: block;
+  width: 100%;
 }
 ul {
   color: var(--second-color);

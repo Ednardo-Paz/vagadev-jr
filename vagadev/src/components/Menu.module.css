@@ -3,6 +3,14 @@
   align-items: center;
   margin-top: 45px;
   justify-content: space-around;
+  position: relative;
+  z-index: 1000;
+}
+
+@media (max-width: 1300px) {
+  .header {
+    margin-top: 25px;
+  }
 }
 
 .logo {
@@ -28,10 +36,34 @@
   height: 0px;
 
 
-  border: 1px solid #000;
+  border: 1px solid #FFFFFF;
   transform: rotate(90deg);
 }
 
 .iconSvg {
-  margin-left: 15px;
+  margin-left: 15px !important;
+  color: var(--third-color);
+}
+
+@media (max-width: 768px) {
+  .iconSvg {
+    display: none;
+  }
+
+  .header {
+    margin-top: 21px;
+  }
+
+  .logo {
+    width: 107px;
+  }
+
+  .menuNav {
+    gap: 20px;
+  }
+
+  .divider {
+    display: none;
+  }
+
 }

@@ -1,0 +1,50 @@
+.listaMenu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  position: absolute;
+  width: 565px;
+  min-height: 249px;
+  left: 10%;
+  top: 67.48px;
+
+  /* Dark blue */
+
+  background: #084154;
+  /* Blue */
+
+  border: 2px solid #3EC6E0;
+  border-radius: 5px;
+  padding: 32px;
+  gap: 15px;
+
+}
+
+
+.listaText {
+  color: #fff;
+}
+
+.ListaTitle {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 20px;
+  color: #FFFFFF;
+}
+
+.listaMenu ul li {
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .listaMenu {
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    left: 0;
+    top: 35.48px;
+    padding-bottom: 0;
+  }
+}

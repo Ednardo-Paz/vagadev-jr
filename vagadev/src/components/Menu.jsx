@@ -22,14 +22,14 @@ const Menu = () => {
       <nav className={styles.nav}>
         <ul className={styles.menuNav}>
           <li>
-            <IconPaperPlane height={'21px'} width={'26px'} color={'#000'} />
+            <IconPaperPlane height={'21px'} width={'26px'} color={'#EBEBEB'} />
             <Link className={styles.iconSvg} to="/">
               CONTATO
             </Link>
           </li>
           <li className={styles.divider}></li>
           <li>
-            <IconSearchSvg color={''} width={'25px'} height={'20px'} />
+            <IconSearchSvg color={'#EBEBEB'} width={'25px'} height={'20px'} />
             <Link className={styles.iconSvg} to="/">
               BUSCAR
             </Link>
@@ -37,7 +37,11 @@ const Menu = () => {
           <li className={styles.divider}></li>
           <li>
             <Link to="/">
-              <IconShopBagSvg color={''} width={'22px'} height={'26px'} />
+              <IconShopBagSvg
+                color={'#EBEBEB'}
+                width={'22px'}
+                height={'26px'}
+              />
             </Link>
           </li>
         </ul>

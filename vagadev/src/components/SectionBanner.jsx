@@ -7,7 +7,7 @@ import Title from '../componentsGeneral/Title';
 const SectionBanner = () => {
   return (
     <section className={styles.sectionContainer}>
-      <img className={styles.imgBanner} src={banner} alt="" />
+      <img className={styles.imgBanner} src={banner} alt="Mortal Kombat" />
       <div className={styles.textBanner}>
         <Title text={'MORTAL KOMBAT'} />
         <h2 className={styles.textPrice}>

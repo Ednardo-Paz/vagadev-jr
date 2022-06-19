@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Menu.module.css';
 import logo from '../assets/img/Logo.png';
@@ -6,14 +6,27 @@ import IconHamburguer from '../componentsGeneral/IconHamburguerSvg';
 import IconPaperPlane from '../componentsGeneral/IconPaperPlaneSvg';
 import IconSearchSvg from '../componentsGeneral/IconSearchSvg';
 import IconShopBagSvg from '../componentsGeneral/IconShopBagSvg';
+import ListaMenu from './ListaMenu';
 
 const Menu = () => {
+  const [menuActive, setMenuActive] = useState(null);
+
+  function handleClick(e) {
+    let el = e.target;
+    el.classList.toggle('activeLista');
+    if (el.classList.value === 'activeLista') {
+      setMenuActive(true);
+    } else {
+      setMenuActive(false);
+    }
+  }
+
   return (
     <header className={styles.header}>
       <div className={styles.menuLogo}>
-        <div className={styles.menu}>
+        <Link onClick={handleClick} to={'/'} className={styles.menu}>
           <IconHamburguer color={'#EBEBEB'} />
-        </div>
+        </Link>
         <Link to="/">
           <img className={styles.logo} src={logo} alt="Logo" />
         </Link>
@@ -49,6 +62,7 @@ const Menu = () => {
             </Link>
           </li>
         </ul>
+        <ListaMenu menuActive={menuActive} />
       </nav>
     </header>
   );

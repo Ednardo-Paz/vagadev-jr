@@ -9,7 +9,7 @@ import IconShopBagSvg from '../componentsGeneral/IconShopBagSvg';
 import ListaMenu from './ListaMenu';
 
 const Menu = () => {
-  const [menuActive, setMenuActive] = useState(null);
+  const [menuActive, setMenuActive] = useState(false);
 
   function handleClick(e) {
     let el = e.target;

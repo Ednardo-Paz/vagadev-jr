@@ -22,7 +22,7 @@ const Menu = () => {
   }
 
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} sectionContainer`}>
       <div className={styles.menuLogo}>
         <Link onClick={handleClick} to={'/'} className={styles.menu}>
           <IconHamburguer color={'#EBEBEB'} />

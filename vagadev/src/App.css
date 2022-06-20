@@ -18,6 +18,11 @@
   margin: 0 auto;
 }
 
+.sectionContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 img {
   display: block;
   width: 100%;

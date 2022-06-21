@@ -5,7 +5,6 @@
   justify-content: space-between;
   position: relative;
   z-index: 1000;
-  padding: 0 3%;
 }
 
 @media (max-width: 1300px) {

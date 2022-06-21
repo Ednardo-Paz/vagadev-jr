@@ -52,3 +52,19 @@ h1 {
   color: var(--third-color);
   margin-bottom: .5rem;
 }
+
+.swiper-slide .swiper-slide-active {
+  margin-right: 30px;
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  content: 'prev';
+  color: #000;
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  content: 'next';
+  color: #000;
+}

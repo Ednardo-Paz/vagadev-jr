@@ -1,5 +1,3 @@
-.generalCard {}
-
 .card {
   height: 602px;
   width: 350px;
@@ -9,11 +7,11 @@
   margin-top: 80px;
   position: relative;
   margin-left: 26px;
-
+  margin-bottom: 52px
 }
 
 .imgCard {
-  margin-top: 20px;
+  padding-top: 20px;
 }
 
 .infoCard {

@@ -1,0 +1,62 @@
+.generalCard {}
+
+.card {
+  height: 602px;
+  width: 350px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 20px 7px rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+  margin-top: 80px;
+  position: relative;
+  margin-left: 26px;
+
+}
+
+.imgCard {
+  margin-top: 20px;
+}
+
+.infoCard {
+  display: flex;
+  flex-direction: column;
+  background: #F5F5F5;
+  border-radius: 0px 0px 10px 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 185px;
+  justify-content: space-around;
+  padding: 0 36px;
+  border-top: 1px solid #3EC6E0;
+}
+
+.btnCard {
+  background: #3EC6E0;
+  border-radius: 5px;
+  color: #FFFFFF;
+  padding: 17px;
+  border: none;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.titleCard {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.priceCard {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 21px;
+  color: #084154;
+}

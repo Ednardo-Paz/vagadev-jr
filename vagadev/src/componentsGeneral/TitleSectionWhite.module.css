@@ -1,8 +1,19 @@
-.titleSctionWhite {
+.titleSctionWhiteH1 {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 300;
   font-size: 36px;
   line-height: 42px;
   color: #084154;
+  margin-bottom: 0;
+}
+
+.imgTitle {
+  width: 28px;
+}
+
+.titleSctionWhite {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }

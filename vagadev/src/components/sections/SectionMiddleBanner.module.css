@@ -6,6 +6,8 @@
   top: -228px;
   width: 63%;
   margin: 0 auto;
+  z-index: 500;
+  position: relative;
 }
 
 .middleBannerImg {

@@ -1,7 +1,9 @@
 import React from 'react';
 import Menu from '../components/Menu';
-import SectionBanner from '../components/SectionBanner';
-import SectionMiddleBanner from '../components/SectionMiddleBanner';
+import SectionBanner from '../components/sections/SectionBanner';
+
+import SectionCart from '../components/sections/SectionCard';
+import SectionMiddleBanner from '../components/sections/SectionMiddleBanner';
 
 const Home = () => {
   return (
@@ -10,6 +12,7 @@ const Home = () => {
         <Menu />
         <SectionBanner />
         <SectionMiddleBanner />
+        <SectionCart />
       </section>
     </>
   );

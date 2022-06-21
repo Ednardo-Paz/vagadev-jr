@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './SectionBanner.module.css';
-import banner from '../assets/img/principal_banner_desktop.jpg';
-import SliderNav from './SliderNav';
-import Title from '../componentsGeneral/Title';
+import banner from '../../assets/img/principal_banner_desktop.jpg';
+import SliderNav from '.././SliderNav';
+import Title from '../../componentsGeneral/Title';
 
 const SectionBanner = () => {
   return (

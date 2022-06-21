@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './SectionMiddleBanner.module.css';
-import imgZelda from '../assets/img/zelda_banner.jpg';
-import imgSekiro from '../assets/img/sekiro_banner.jpg';
-import RectangleMiddlebanner from '../componentsGeneral/RectangleMiddlebanner';
+import imgZelda from '../../assets/img/zelda_banner.jpg';
+import imgSekiro from '../../assets/img/sekiro_banner.jpg';
+import RectangleMiddlebanner from '../../componentsGeneral/RectangleMiddlebanner';
 const SectionMiddleBanner = () => {
   return (
     <section className={`${styles.middleBanner} sectionContainer`}>

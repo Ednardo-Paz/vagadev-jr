@@ -7,8 +7,8 @@ const Card = ({ img, title, price, id }) => {
   }
   return (
     <>
-      <div className={styles.card}>
-        <div className={styles.imgCard} key={id}>
+      <div className={styles.card} key={id}>
+        <div className={styles.imgCard}>
           <img src={img} alt="" />
         </div>
         <div className={styles.infoCard}>

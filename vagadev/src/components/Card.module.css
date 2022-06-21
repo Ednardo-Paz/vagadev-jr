@@ -1,13 +1,15 @@
 .card {
   height: 602px;
-  width: 350px;
+  width: 340px;
   background: #FFFFFF;
   box-shadow: 0px 4px 20px 7px rgba(0, 0, 0, 0.07);
   border-radius: 10px;
   margin-top: 80px;
   position: relative;
   margin-left: 26px;
-  margin-bottom: 52px
+  margin-bottom: 52px;
+  margin-left: 50%;
+  right: 170px;
 }
 
 .imgCard {
@@ -57,4 +59,11 @@
   font-size: 18px;
   line-height: 21px;
   color: #084154;
+}
+
+@media (max-width: 1000px) {
+  .card {
+    width: 275px;
+    right: 137px;
+  }
 }

@@ -1,1 +1,16 @@
-.sectionCard {}
+.sectionCard {
+  position: relative;
+  top: -140px;
+}
+
+@media (max-width: 1300px) {
+  .sectionCard {
+    top: -100px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .sectionCard {
+    top: -100px;
+  }
+}

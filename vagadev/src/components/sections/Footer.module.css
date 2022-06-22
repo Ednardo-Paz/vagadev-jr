@@ -1,0 +1,26 @@
+.footer {
+  display: grid;
+  grid-template-columns: 30% 1fr;
+}
+
+.logoFooter {
+  background-color: var(--second-color);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 35px;
+}
+
+.logoFooterImg {
+  width: 42px;
+}
+
+
+.copyright {
+  background-color: var(--primary-color);
+}
+
+.copyright p {
+  color: #fff;
+  padding: 19px 35px;
+}

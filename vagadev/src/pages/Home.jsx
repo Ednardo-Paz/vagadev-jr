@@ -1,5 +1,6 @@
 import React from 'react';
 import Menu from '../components/Menu';
+import Footer from '../components/sections/Footer';
 import SectionBanner from '../components/sections/SectionBanner';
 
 import SectionCart from '../components/sections/SectionCard';
@@ -13,6 +14,7 @@ const Home = () => {
         <SectionBanner />
         <SectionMiddleBanner />
         <SectionCart />
+        <Footer />
       </section>
     </>
   );

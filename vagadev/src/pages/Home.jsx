@@ -1,5 +1,5 @@
 import React from 'react';
-import Menu from '../components/Menu';
+import Menu from '../components/sections/Menu';
 import Footer from '../components/sections/Footer';
 import SectionBanner from '../components/sections/SectionBanner';
 

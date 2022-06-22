@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Menu.module.css';
-import logo from '../assets/img/Logo.png';
-import IconHamburguer from '../componentsGeneral/IconHamburguerSvg';
-import IconPaperPlane from '../componentsGeneral/IconPaperPlaneSvg';
-import IconSearchSvg from '../componentsGeneral/IconSearchSvg';
-import IconShopBagSvg from '../componentsGeneral/IconShopBagSvg';
-import ListaMenu from './ListaMenu';
-import CloseBtnSvg from '../componentsGeneral/CloseBtnSvg';
+import logo from '../../assets/img/Logo.png';
+import IconHamburguer from '../../componentsGeneral/IconHamburguerSvg';
+import IconPaperPlane from '../../componentsGeneral/IconPaperPlaneSvg';
+import IconSearchSvg from '../../componentsGeneral/IconSearchSvg';
+import IconShopBagSvg from '../../componentsGeneral/IconShopBagSvg';
+import ListaMenu from '../ListaMenu';
+import CloseBtnSvg from '../../componentsGeneral/CloseBtnSvg';
 
 const Menu = () => {
   const [menuActive, setMenuActive] = useState(false);
@@ -24,7 +24,7 @@ const Menu = () => {
         }`}
       >
         <div className={styles.menuLogo}>
-          <div onClick={handleClick}>
+          <div onClick={handleClick} onMouseEnter={handleClick}>
             {menuActive ? (
               <CloseBtnSvg width={'30px'} height={'30px'} color={'#EBEBEB'} />
             ) : (

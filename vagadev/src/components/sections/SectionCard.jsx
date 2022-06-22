@@ -13,7 +13,6 @@ import 'swiper/css/pagination';
 import { FreeMode, Navigation } from 'swiper';
 
 const SectionCard = () => {
-  console.log(jogos);
   return (
     <div className={`${styles.sectionCard} sectionContainer`}>
       <TitleSctionWhite text={'Produtos em destaque'} />

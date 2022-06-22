@@ -44,12 +44,12 @@
     height: 100vh;
     grid-template-columns: 1fr;
     left: 0;
-    top: 35.48px;
+    top: 55.48px;
     padding-bottom: 0;
+    border: none;
   }
 
   .ListaTitle {
     font-size: 24px;
-
   }
 }

@@ -17,53 +17,63 @@ const Menu = () => {
   }
 
   return (
-    <header className={`${styles.header} sectionContainer`}>
-      <div className={styles.menuLogo}>
-        <Link onClick={handleClick} to={'/'} className={styles.menu}>
-          {menuActive ? (
-            <CloseBtnSvg width={'30px'} height={'30px'} color={'#EBEBEB'} />
-          ) : (
-            <IconHamburguer color={'#EBEBEB'} />
-          )}
-        </Link>
-        <Link to="/">
-          <img className={styles.logo} src={logo} alt="Logo" />
-        </Link>
-      </div>
-      <ListaMenu menuActive={menuActive} />
+    <>
+      <header
+        className={`${styles.header} sectionContainer  ${
+          menuActive && 'menuMobile'
+        }`}
+      >
+        <div className={styles.menuLogo}>
+          <div onClick={handleClick}>
+            {menuActive ? (
+              <CloseBtnSvg width={'30px'} height={'30px'} color={'#EBEBEB'} />
+            ) : (
+              <IconHamburguer color={'#EBEBEB'} />
+            )}
+          </div>
+          <Link to="/">
+            <img className={styles.logo} src={logo} alt="Logo" />
+          </Link>
+          <ListaMenu menuActive={menuActive} />
+        </div>
 
-      <nav className={styles.nav}>
-        <ul className={styles.menuNav}>
-          <li>
-            <Link to="/">
-              <IconPaperPlane
-                height={'21px'}
-                width={'26px'}
-                color={'#EBEBEB'}
-              />
-              <span className={styles.iconSvg}>CONTATO</span>
-            </Link>
-          </li>
-          <li className={styles.divider}></li>
-          <li>
-            <Link to="/">
-              <IconSearchSvg color={'#EBEBEB'} width={'25px'} height={'20px'} />
-              <span className={styles.iconSvg}>BUSCAR</span>
-            </Link>
-          </li>
-          <li className={styles.divider}></li>
-          <li>
-            <Link to="/">
-              <IconShopBagSvg
-                color={'#EBEBEB'}
-                width={'22px'}
-                height={'26px'}
-              />
-            </Link>
-          </li>
-        </ul>
-      </nav>
-    </header>
+        <nav className={styles.nav}>
+          <ul className={styles.menuNav}>
+            <li>
+              <Link to="/">
+                <IconPaperPlane
+                  height={'21px'}
+                  width={'26px'}
+                  color={'#EBEBEB'}
+                />
+                <span className={styles.iconSvg}>CONTATO</span>
+              </Link>
+            </li>
+            <li className={styles.divider}></li>
+            <li>
+              <Link to="/">
+                <IconSearchSvg
+                  color={'#EBEBEB'}
+                  width={'25px'}
+                  height={'20px'}
+                />
+                <span className={styles.iconSvg}>BUSCAR</span>
+              </Link>
+            </li>
+            <li className={styles.divider}></li>
+            <li>
+              <Link to="/">
+                <IconShopBagSvg
+                  color={'#EBEBEB'}
+                  width={'22px'}
+                  height={'26px'}
+                />
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </>
   );
 };
 

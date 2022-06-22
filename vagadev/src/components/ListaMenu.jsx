@@ -4,7 +4,7 @@ const ListaMenu = ({ menuActive }) => {
   return (
     <>
       {menuActive && (
-        <nav className={styles.listaMenu}>
+        <div className={styles.listaMenu}>
           <div className={styles.listaText}>
             <h1 className={styles.ListaTitle}>Luta</h1>
             <ul>
@@ -32,7 +32,7 @@ const ListaMenu = ({ menuActive }) => {
               <li>Forza Horizon</li>
             </ul>
           </div>
-        </nav>
+        </div>
       )}
     </>
   );

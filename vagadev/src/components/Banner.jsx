@@ -1,8 +1,16 @@
 import React from 'react';
 import styles from './Banner.module.css';
 import Title from '../componentsGeneral/Title';
+import { useEffect } from 'react';
+import { useContext } from 'react';
+import { UserContext } from '../storage/UserContext';
 
-const Banner = ({ img, title, description, price, id }) => {
+const Banner = ({ img, title, description, price, id, active, array }) => {
+  const { setSlide } = useContext(UserContext);
+  useEffect(() => {
+    setSlide(array);
+  }, []);
+
   return (
     <div key={id}>
       <div>

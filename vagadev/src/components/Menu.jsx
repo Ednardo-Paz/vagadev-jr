@@ -7,30 +7,30 @@ import IconPaperPlane from '../componentsGeneral/IconPaperPlaneSvg';
 import IconSearchSvg from '../componentsGeneral/IconSearchSvg';
 import IconShopBagSvg from '../componentsGeneral/IconShopBagSvg';
 import ListaMenu from './ListaMenu';
+import CloseBtnSvg from '../componentsGeneral/CloseBtnSvg';
 
 const Menu = () => {
   const [menuActive, setMenuActive] = useState(false);
 
-  function handleClick(e) {
-    let el = e.target;
-    el.classList.toggle('activeLista');
-    if (el.classList.value === 'activeLista') {
-      setMenuActive(true);
-    } else {
-      setMenuActive(false);
-    }
+  function handleClick() {
+    setMenuActive(!menuActive);
   }
 
   return (
     <header className={`${styles.header} sectionContainer`}>
       <div className={styles.menuLogo}>
         <Link onClick={handleClick} to={'/'} className={styles.menu}>
-          <IconHamburguer color={'#EBEBEB'} />
+          {menuActive ? (
+            <CloseBtnSvg width={'30px'} height={'30px'} color={'#EBEBEB'} />
+          ) : (
+            <IconHamburguer color={'#EBEBEB'} />
+          )}
         </Link>
         <Link to="/">
           <img className={styles.logo} src={logo} alt="Logo" />
         </Link>
       </div>
+      <ListaMenu menuActive={menuActive} />
 
       <nav className={styles.nav}>
         <ul className={styles.menuNav}>
@@ -62,7 +62,6 @@ const Menu = () => {
             </Link>
           </li>
         </ul>
-        <ListaMenu menuActive={menuActive} />
       </nav>
     </header>
   );

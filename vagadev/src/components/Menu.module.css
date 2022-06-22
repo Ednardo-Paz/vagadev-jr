@@ -52,6 +52,8 @@
 
   .header {
     margin-top: 21px;
+    position: fixed;
+    width: 100%;
   }
 
   .logo {

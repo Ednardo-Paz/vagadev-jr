@@ -1,17 +1,22 @@
 import React from 'react';
+import { useContext } from 'react';
 import SlideNextButton from '../componentsGeneral/ButtonNext';
 import SlidePrevButton from '../componentsGeneral/ButtonPrev';
 import IconLeftSvg from '../componentsGeneral/IconLeftSvg';
 import IconRightSvg from '../componentsGeneral/IconRightSvg';
+import { UserContext } from '../storage/UserContext';
 import styles from './SliderNav.module.css';
 
 const SliderNav = () => {
+  const { slide, swiper } = useContext(UserContext);
   return (
     <>
       <div className={styles.slider}>
         <p className={styles.sliderText}>MORTAL KOMBAT</p>
         <div className={styles.pagination}>
-          <span className={styles.paginationText}>1/2</span>
+          <span className={styles.paginationText}>
+            {`${swiper && swiper} / ${slide && slide.length}`}
+          </span>
           <div className={styles.iconsArrows}>
             <div className={styles.iconRight}>
               <SlideNextButton

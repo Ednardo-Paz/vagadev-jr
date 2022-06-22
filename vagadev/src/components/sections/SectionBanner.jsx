@@ -7,11 +7,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { Pagination, Navigation } from 'swiper';
-import { useSwiperSlide } from 'swiper/react';
-import SlideNextButton from '../../componentsGeneral/ButtonNext';
+import { useContext } from 'react';
+import { UserContext } from '../../storage/UserContext';
+
 const SectionBanner = () => {
-  const swiper = useSwiperSlide();
+  const { setSwiper } = useContext(UserContext);
 
   return (
     <section className={styles.sectionContainer}>
@@ -19,14 +19,21 @@ const SectionBanner = () => {
         pagination={{
           type: 'fraction',
         }}
-        navigation={true}
-        modules={[Pagination, Navigation]}
+        navigation={false}
         className="ySwiper"
+        onSlideChange={(swiper) => {
+          setSwiper(swiper.realIndex + 1);
+        }}
+        onSwiper={(swiper) => {
+          setSwiper(swiper.realIndex + 1);
+        }}
       >
         {banners &&
-          banners.map((banner) => (
+          banners.map((banner, index, array) => (
             <SwiperSlide>
               <Banner
+                array={array}
+                active={index}
                 title={banner.title}
                 price={banner.price}
                 img={banner.img}

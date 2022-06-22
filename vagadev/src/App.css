@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap');
 
+body {
+  background-color: #000;
+}
+
 :root {
   --primary-color: #3EC6E0;
   --second-color: #084154;
@@ -16,12 +20,14 @@
 .container {
   max-width: 1920px;
   margin: 0 auto;
+  background-color: #fff;
 }
 
 .sectionContainer {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 3%;
+
 }
 
 img {
@@ -67,4 +73,15 @@ h1 {
 .swiper-rtl .swiper-button-prev:after {
   content: 'next';
   color: #000;
+}
+
+@media (max-width: 768px) {
+  .menuMobile {
+    margin-top: 19px !important;
+    position: fixed !important;
+    width: 100% !important;
+    background-color: #084154 !important;
+    padding: 17px 19px;
+    top: -19px;
+  }
 }

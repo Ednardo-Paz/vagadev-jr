@@ -2,14 +2,21 @@ import React from 'react';
 import { useState } from 'react';
 import styles from './Card.module.css';
 import ButtonComprado from '../componentsGeneral/ButtonComprado';
+import { useContext } from 'react';
+import { UserContext } from '../storage/UserContext';
 
 const Card = ({ img, title, price, id, onClick = () => {} }) => {
+  const [style, setStyle] = useState('btnCard');
+  const { produtosComprados, setProdutosComprados } = useContext(UserContext);
+
   function toFixedFunction(price) {
     return price.toFixed(2).replace('.', ',');
   }
-  const [style, setStyle] = useState('btnCard');
 
-  const changeStyle = () => {
+  const handleClick = () => {
+    produtosComprados.push({ img, title, price, id });
+    setProdutosComprados(produtosComprados);
+
     setStyle('btnComprado');
     onClick();
   };
@@ -25,7 +32,7 @@ const Card = ({ img, title, price, id, onClick = () => {} }) => {
           <h3 className={styles.priceCard}>R$ {toFixedFunction(price)}</h3>
 
           {style === 'btnCard' ? (
-            <button onClick={changeStyle} className={style}>
+            <button onClick={handleClick} className={style}>
               Comprar
             </button>
           ) : (

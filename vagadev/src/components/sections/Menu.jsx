@@ -76,12 +76,15 @@ const Menu = () => {
             </li>
             <li className={styles.divider}></li>
             <li>
-              <Link to="/">
+              <Link to="/" className={styles.amount}>
                 <IconShopBagSvg
                   color={'#EBEBEB'}
                   width={'22px'}
                   height={'26px'}
                 />
+                <div>
+                  <p className={styles.amountText}>2</p>
+                </div>
               </Link>
             </li>
           </ul>

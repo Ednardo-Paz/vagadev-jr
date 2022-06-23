@@ -45,6 +45,20 @@
   color: var(--third-color);
 }
 
+.amount {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.amountText {
+  color: white;
+  padding: 4px 8px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+}
+
+
 @media (max-width: 768px) {
   .iconSvg {
     display: none;

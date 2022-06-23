@@ -1,10 +1,19 @@
 import React from 'react';
+import { useState } from 'react';
 import styles from './Card.module.css';
+import ButtonComprado from '../componentsGeneral/ButtonComprado';
 
 const Card = ({ img, title, price, id, onClick = () => {} }) => {
   function toFixedFunction(price) {
     return price.toFixed(2).replace('.', ',');
   }
+  const [style, setStyle] = useState('btnCard');
+
+  const changeStyle = () => {
+    setStyle('btnComprado');
+    onClick();
+  };
+
   return (
     <>
       <div className={styles.card} key={id}>
@@ -14,9 +23,14 @@ const Card = ({ img, title, price, id, onClick = () => {} }) => {
         <div className={styles.infoCard}>
           <p className={styles.titleCard}>{title}</p>
           <h3 className={styles.priceCard}>R$ {toFixedFunction(price)}</h3>
-          <button onClick={onClick} className={styles.btnCard}>
-            Comprar
-          </button>
+
+          {style === 'btnCard' ? (
+            <button onClick={changeStyle} className={style}>
+              Comprar
+            </button>
+          ) : (
+            <ButtonComprado />
+          )}
         </div>
       </div>
     </>

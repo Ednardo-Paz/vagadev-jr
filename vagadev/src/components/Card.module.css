@@ -30,20 +30,6 @@
   border-top: 1px solid #3EC6E0;
 }
 
-.btnCard {
-  background: #3EC6E0;
-  border-radius: 5px;
-  color: #FFFFFF;
-  padding: 17px;
-  border: none;
-
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 900;
-  font-size: 18px;
-  line-height: 21px;
-}
-
 .titleCard {
   font-family: 'Roboto';
   font-style: normal;
@@ -59,6 +45,20 @@
   font-size: 18px;
   line-height: 21px;
   color: #084154;
+}
+
+.btnComprado {
+  background: #000;
+  border-radius: 5px;
+  color: #FFFFFF;
+  padding: 17px;
+  border: none;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 21px;
 }
 
 @media (max-width: 1000px) {

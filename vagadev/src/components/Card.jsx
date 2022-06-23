@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Card.module.css';
 
-const Card = ({ img, title, price, id }) => {
+const Card = ({ img, title, price, id, onClick = () => {} }) => {
   function toFixedFunction(price) {
     return price.toFixed(2).replace('.', ',');
   }
@@ -14,7 +14,9 @@ const Card = ({ img, title, price, id }) => {
         <div className={styles.infoCard}>
           <p className={styles.titleCard}>{title}</p>
           <h3 className={styles.priceCard}>R$ {toFixedFunction(price)}</h3>
-          <button className={styles.btnCard}>Comprar</button>
+          <button onClick={onClick} className={styles.btnCard}>
+            Comprar
+          </button>
         </div>
       </div>
     </>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CloseBtnSvg = ({ color, width, height }) => {
+const CloseBtnSvg = ({ color, height, width }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -18,7 +18,7 @@ const CloseBtnSvg = ({ color, width, height }) => {
           transform="rotate(-45 4.908 19.398)"
         ></circle>
         <path
-          fill={color}
+          fill="#fff"
           d="M0 0H2V19H0z"
           data-name="Retângulo 14"
           transform="rotate(-45 5.15 -.501)"

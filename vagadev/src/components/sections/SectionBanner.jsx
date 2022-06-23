@@ -1,17 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './SectionBanner.module.css';
 import SliderNav from '.././SliderNav';
 import Banner from '../Banner';
-import { banners } from '../../obj';
+import { jogos } from '../../obj';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { useContext } from 'react';
 import { UserContext } from '../../storage/UserContext';
+import { useEffect } from 'react';
 
 const SectionBanner = () => {
   const { setSwiper } = useContext(UserContext);
+  const [jogosComBanner, setJogosComBanner] = useState(null);
+
+  function bannersFunction(value) {
+    if (value.banner === true) return value;
+  }
+
+  useEffect(() => {
+    setJogosComBanner(jogos.filter(bannersFunction));
+  }, []);
 
   return (
     <section className={styles.sectionContainer}>
@@ -28,8 +38,8 @@ const SectionBanner = () => {
           setSwiper(swiper.realIndex + 1);
         }}
       >
-        {banners &&
-          banners.map((banner, index, array) => (
+        {jogosComBanner &&
+          jogosComBanner.map((banner, index, array) => (
             <SwiperSlide>
               <Banner
                 array={array}

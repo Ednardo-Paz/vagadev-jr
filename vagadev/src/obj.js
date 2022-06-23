@@ -6,27 +6,28 @@ import banner2 from '../src/assets/img/principal_banner_desktop_02.jpg';
 
 export const jogos = [
   {
+    banner: false,
     id: 56,
     img: imgOutriders,
-    price: 200.0,
+    price: 200,
     title: 'Outriders',
   },
   {
+    banner: false,
     id: 1,
     img: imgCyber,
-    price: 200.0,
+    price: 200,
     title: 'CYBERPUNK 2077',
   },
   {
+    banner: false,
     id: 27,
     img: imgDonkey,
-    price: 200.0,
+    price: 200,
     title: 'Donkey Kong Countru Tropical Freeze',
   },
-];
-
-export const banners = [
   {
+    banner: true,
     id: 2,
     img: banner1,
     title: 'MORTAL KOMBAT',
@@ -35,10 +36,11 @@ export const banners = [
       'Mortal Kombat X combina uma apresentação cinemática única com uma jogabilidade totalmente nova. Os jogadores podem escolher pela primeira vez diversas variantes de cada personagem, afetando tanto a estratégia como o estilo de luta.',
   },
   {
+    banner: true,
     id: 5,
     img: banner2,
     title: '',
-    price: '',
+    price: 0,
     description: '',
   },
 ];

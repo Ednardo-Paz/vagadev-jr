@@ -24,7 +24,7 @@ const Menu = () => {
         }`}
       >
         <div className={styles.menuLogo}>
-          <div onClick={handleClick} onMouseEnter={handleClick}>
+          <div onClick={handleClick}>
             {menuActive ? (
               <CloseBtnSvg width={'30px'} height={'30px'} color={'#EBEBEB'} />
             ) : (

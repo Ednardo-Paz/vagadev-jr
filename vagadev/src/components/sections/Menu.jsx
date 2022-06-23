@@ -10,22 +10,36 @@ import ListaMenu from '../ListaMenu';
 import CloseBtnSvg from '../../componentsGeneral/CloseBtnSvg';
 
 const Menu = () => {
-  const [menuActive, setMenuActive] = useState(false);
+  const [menuActiveByHover, setMenuActiveByHover] = useState(false);
+  const [menuActiveByClick, setMenuActiveByClick] = useState(false);
 
   function handleClick() {
-    setMenuActive(!menuActive);
+    setMenuActiveByClick(!menuActiveByClick);
+    setMenuActiveByHover(false);
+  }
+
+  function showMenu() {
+    setMenuActiveByHover(true);
+  }
+
+  function hideMenu() {
+    setMenuActiveByHover(false);
   }
 
   return (
     <>
       <header
         className={`${styles.header} sectionContainer  ${
-          menuActive && 'menuMobile'
+          menuActiveByClick && 'menuMobile'
         }`}
       >
         <div className={styles.menuLogo}>
-          <div onClick={handleClick}>
-            {menuActive ? (
+          <div
+            onClick={handleClick}
+            onMouseEnter={showMenu}
+            onMouseLeave={hideMenu}
+          >
+            {menuActiveByClick ? (
               <CloseBtnSvg width={'30px'} height={'30px'} color={'#EBEBEB'} />
             ) : (
               <IconHamburguer color={'#EBEBEB'} />
@@ -34,7 +48,7 @@ const Menu = () => {
           <Link to="/">
             <img className={styles.logo} src={logo} alt="Logo" />
           </Link>
-          <ListaMenu menuActive={menuActive} />
+          <ListaMenu menuActive={menuActiveByHover || menuActiveByClick} />
         </div>
 
         <nav className={styles.nav}>

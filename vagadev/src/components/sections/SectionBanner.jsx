@@ -40,7 +40,7 @@ const SectionBanner = () => {
       >
         {jogosComBanner &&
           jogosComBanner.map((banner, index, array) => (
-            <SwiperSlide>
+            <SwiperSlide key={banner.id}>
               <Banner
                 array={array}
                 active={index}

@@ -56,14 +56,8 @@ const SectionCard = () => {
         >
           <div className={styles.allCards}>
             {jogos.map((jogo) => (
-              <SwiperSlide>
-                <Card
-                  onClick={handleClick}
-                  key={jogo.id}
-                  img={jogo.img}
-                  title={jogo.title}
-                  price={jogo.price}
-                />
+              <SwiperSlide key={jogo.id}>
+                <Card onClick={handleClick} {...jogo} />
               </SwiperSlide>
             ))}
           </div>

@@ -9,9 +9,11 @@ import IconShopBagSvg from '../../componentsGeneral/IconShopBagSvg';
 import ListaMenu from '../ListaMenu';
 
 import { UserContext } from '../../storage/UserContext';
+import ListaComprados from '../ListaComprados';
 const Menu = () => {
   const [menuActiveByHover, setMenuActiveByHover] = useState(false);
   const [menuActiveByClick, setMenuActiveByClick] = useState(false);
+  const [menuActiveByClickBought, setMenuActiveByClickBought] = useState(false);
 
   const { produtosComprados } = useContext(UserContext);
 
@@ -28,6 +30,10 @@ const Menu = () => {
     setMenuActiveByHover(false);
   }
 
+  function handleClickBought() {
+    setMenuActiveByClickBought(!menuActiveByClickBought);
+  }
+  console.log(menuActiveByClickBought);
   return (
     <>
       <header
@@ -78,9 +84,10 @@ const Menu = () => {
                 <span className={styles.iconSvg}>BUSCAR</span>
               </Link>
             </li>
+            <ListaComprados menuActive={menuActiveByClickBought} />
             <li className={styles.divider}></li>
             <li>
-              <Link to="/" className={styles.amount}>
+              <div onClick={handleClickBought} className={styles.amount}>
                 <IconShopBagSvg
                   color={'#EBEBEB'}
                   width={'22px'}
@@ -91,7 +98,7 @@ const Menu = () => {
                     {produtosComprados.length}
                   </p>
                 </div>
-              </Link>
+              </div>
             </li>
           </ul>
         </nav>

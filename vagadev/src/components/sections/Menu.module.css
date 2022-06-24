@@ -29,6 +29,7 @@
 .menuLogo {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .divider {
@@ -49,6 +50,7 @@
   display: flex;
   align-items: center;
   gap: 7px;
+  cursor: pointer;
 }
 
 .amountText {

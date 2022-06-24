@@ -35,7 +35,7 @@ const ListaPesquisa = ({ menuActive }) => {
           </div>
           <>
             {jogosPesquisa.map((jogo) => (
-              <div>
+              <div key={jogo.key}>
                 <h1 className={styles.ListaTitle}>{jogo.title}</h1>
                 <div className={styles.ListaImg}>
                   <img src={jogo.img} alt={jogo.title} />

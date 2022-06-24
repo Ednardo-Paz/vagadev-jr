@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import { GlobalStorage } from './storage/UserContext';
 import Menu from './components/sections/Menu';
 import Footer from './components/sections/Footer';
+import Contato from './pages/Contato';
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
           <Menu />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/contato" element={<Contato />} />
           </Routes>
           <Footer />
         </BrowserRouter>

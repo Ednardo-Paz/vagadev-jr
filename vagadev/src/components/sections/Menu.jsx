@@ -64,7 +64,7 @@ const Menu = () => {
         <nav className={styles.nav}>
           <ul className={styles.menuNav}>
             <li>
-              <Link to="/">
+              <Link to="/contato">
                 <IconPaperPlane
                   height={'21px'}
                   width={'26px'}

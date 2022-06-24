@@ -1,0 +1,85 @@
+.listaMenu {
+  display: grid;
+  grid-template-columns: 1fr;
+  position: absolute;
+  width: 656px;
+  min-height: 100%;
+  left: 33%;
+  top: 67.48px;
+
+  background: #084154;
+
+  border: 2px solid #3EC6E0;
+  border-radius: 5px;
+  padding: 32px;
+  gap: 15px;
+
+}
+
+.ListaTitleMain {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 32px;
+}
+
+.ListaImg {
+  max-width: 200px;
+}
+
+
+.listaText {
+  color: #fff;
+  margin: 20px 0 40px;
+  border-bottom: #fff solid 1px;
+}
+
+.ListaTitle {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 20px;
+  color: #FFFFFF;
+}
+
+.listaMenu ul li {
+  margin-bottom: 15px;
+}
+
+.Listainput input {
+  width: 100%;
+  height: 47px;
+  font-size: 22px;
+}
+
+::placeholder {
+  color: #164758ad;
+  font-size: 16px;
+  font-family: "Roboto";
+  padding-left: 20px;
+}
+
+
+@media (max-width:1200px) {
+  .listaMenu {
+    left: 19%;
+  }
+}
+
+@media (max-width: 768px) {
+  .listaMenu {
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    left: 0;
+    top: 55.48px;
+    padding-bottom: 0;
+    border: none;
+  }
+
+  .ListaTitle {
+    font-size: 24px;
+  }
+}

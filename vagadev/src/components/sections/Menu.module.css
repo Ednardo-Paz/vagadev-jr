@@ -44,6 +44,7 @@
 .iconSvg {
   margin-left: 15px !important;
   color: var(--third-color);
+  cursor: pointer;
 }
 
 .amount {

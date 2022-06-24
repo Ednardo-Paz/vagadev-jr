@@ -7,12 +7,12 @@ import IconRightSvg from '../componentsGeneral/IconRightSvg';
 import { UserContext } from '../storage/UserContext';
 import styles from './SliderNav.module.css';
 
-const SliderNav = () => {
+const SliderNav = ({ bannerText }) => {
   const { slide, swiper } = useContext(UserContext);
   return (
     <>
       <div className={styles.slider}>
-        <p className={styles.sliderText}>MORTAL KOMBAT</p>
+        <p className={styles.sliderText}>{bannerText}</p>
         <div className={styles.pagination}>
           <span className={styles.paginationText}>
             {`${swiper && swiper} / ${slide && slide.length}`}

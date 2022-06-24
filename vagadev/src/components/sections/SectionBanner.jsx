@@ -50,7 +50,7 @@ const SectionBanner = () => {
                 id={banner.id}
                 description={banner.description}
               />
-              <SliderNav />
+              <SliderNav bannerText={banner.title} />
             </SwiperSlide>
           ))}
       </Swiper>

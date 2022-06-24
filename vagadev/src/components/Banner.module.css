@@ -34,12 +34,6 @@
   margin-top: 15px;
 }
 
-@media (max-width: 1000px) {
-  .imgBanner {
-    height: 436px;
-  }
-}
-
 @media (max-width: 1200px) {
   .textBanner {
     height: 436px;
@@ -55,6 +49,10 @@
     padding: 0 7%;
     background: rgba(0, 0, 0, 0.65);
     height: 230px;
+  }
+
+  .imgBanner {
+    height: 436px;
   }
 
   .textPrice {

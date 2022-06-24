@@ -39,7 +39,7 @@ export const jogos = [
     banner: true,
     id: 5,
     img: banner2,
-    title: '',
+    title: 'Red Dead II',
     price: 0,
     description: '',
   },

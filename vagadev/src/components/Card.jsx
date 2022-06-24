@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 import styles from './Card.module.css';
 import ButtonComprado from '../componentsGeneral/ButtonComprado';
@@ -14,11 +14,12 @@ const Card = ({ img, title, price, id, onClick = () => {} }) => {
   }
 
   const handleClick = () => {
-    produtosComprados.push({ img, title, price, id });
-    setProdutosComprados(produtosComprados);
+    const copiaProdutosComprados = [...produtosComprados];
+    copiaProdutosComprados.push({ img, title, price, id });
 
     setStyle('btnComprado');
     onClick();
+    setProdutosComprados(copiaProdutosComprados);
   };
 
   return (

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Menu.module.css';
 import logo from '../../assets/img/Logo.png';
@@ -8,10 +8,12 @@ import IconSearchSvg from '../../componentsGeneral/IconSearchSvg';
 import IconShopBagSvg from '../../componentsGeneral/IconShopBagSvg';
 import ListaMenu from '../ListaMenu';
 import CloseBtnSvg from '../../componentsGeneral/CloseBtnSvg';
-
+import { UserContext } from '../../storage/UserContext';
 const Menu = () => {
   const [menuActiveByHover, setMenuActiveByHover] = useState(false);
   const [menuActiveByClick, setMenuActiveByClick] = useState(false);
+
+  const { produtosComprados } = useContext(UserContext);
 
   function handleClick() {
     setMenuActiveByClick(!menuActiveByClick);
@@ -83,7 +85,9 @@ const Menu = () => {
                   height={'26px'}
                 />
                 <div>
-                  <p className={styles.amountText}>2</p>
+                  <p className={styles.amountText}>
+                    {produtosComprados.length}
+                  </p>
                 </div>
               </Link>
             </li>

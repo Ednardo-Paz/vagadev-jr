@@ -33,7 +33,7 @@ const Menu = () => {
   function handleClickBought() {
     setMenuActiveByClickBought(!menuActiveByClickBought);
   }
-  console.log(menuActiveByClickBought);
+
   return (
     <>
       <header

@@ -7,7 +7,7 @@ import IconPaperPlane from '../../componentsGeneral/IconPaperPlaneSvg';
 import IconSearchSvg from '../../componentsGeneral/IconSearchSvg';
 import IconShopBagSvg from '../../componentsGeneral/IconShopBagSvg';
 import ListaMenu from '../ListaMenu';
-import CloseBtnSvg from '../../componentsGeneral/CloseBtnSvg';
+
 import { UserContext } from '../../storage/UserContext';
 const Menu = () => {
   const [menuActiveByHover, setMenuActiveByHover] = useState(false);
@@ -42,7 +42,9 @@ const Menu = () => {
             onMouseLeave={hideMenu}
           >
             {menuActiveByClick ? (
-              <CloseBtnSvg width={'30px'} height={'30px'} color={'#EBEBEB'} />
+              <div className={styles.btn}>
+                <div className={styles.btnClose}></div>
+              </div>
             ) : (
               <IconHamburguer color={'#EBEBEB'} />
             )}

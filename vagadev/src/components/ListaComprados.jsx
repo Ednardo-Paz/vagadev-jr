@@ -16,35 +16,21 @@ const ListaComprados = ({ menuActive }) => {
           <h1 className={styles.ListaTitleMain}>
             {produtosComprados.length > 0 ? 'Adicionado' : 'Ainda não Comprou!'}
           </h1>
-          {produtosComprados ? (
-            produtosComprados.map((produto) => (
-              <>
-                <div>
-                  <h1 className={styles.ListaTitle}>{produto.title}</h1>
-                  <div className={styles.ListaImg}>
-                    <img src={produto.img} alt="" />
-                  </div>
-                  <p className={styles.listaText}>
-                    R$ {toFixedFunction(produto.price)}
-                  </p>
-                </div>
-              </>
-            ))
-          ) : (
-            <div>
-              {produtosComprados === [] && (
+          {produtosComprados
+            ? produtosComprados.map((produto) => (
                 <>
-                  <h1 className={styles.ListaTitle}>Ação / Aventura</h1>
-                  <ul>
-                    <li>GTA V</li>
-                    <li>Tomb Raider</li>
-                    <li>HALO</li>
-                    <li>Call of Duty</li>
-                  </ul>
+                  <div>
+                    <h1 className={styles.ListaTitle}>{produto.title}</h1>
+                    <div className={styles.ListaImg}>
+                      <img src={produto.img} alt="" />
+                    </div>
+                    <p className={styles.listaText}>
+                      R$ {toFixedFunction(produto.price)}
+                    </p>
+                  </div>
                 </>
-              )}
-            </div>
-          )}
+              ))
+            : null}
         </div>
       )}
     </>

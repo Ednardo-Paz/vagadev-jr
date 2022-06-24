@@ -4,19 +4,25 @@
   position: absolute;
   width: 565px;
   min-height: 249px;
-  left: 1%;
-  top: 67.48px;
-
-  /* Dark blue */
-
+  left: -3%;
+  top: -18.52px;
   background: #084154;
-  /* Blue */
-
   border: 2px solid #3EC6E0;
   border-radius: 5px;
   padding: 32px;
   gap: 15px;
 
+}
+
+.border {
+  border: #3EC6E0 solid 10px;
+  position: absolute;
+  width: 565px;
+  min-height: 249px;
+  left: 4%;
+  top: 67.48px;
+  background: #084154;
+  border-radius: 5px;
 }
 
 
@@ -38,6 +44,8 @@
   margin-bottom: 15px;
 }
 
+
+
 @media (max-width: 768px) {
   .listaMenu {
     width: 100%;
@@ -51,5 +59,12 @@
 
   .ListaTitle {
     font-size: 24px;
+  }
+
+  .border {
+    position: unset;
+    width: 0%;
+    min-height: 0%;
+    border: none;
   }
 }
